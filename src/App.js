@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import Parallax from 'react-rellax';
+import { FaShoppingBag } from "react-icons/fa";
 
 const PAGE_PRODUCTS = 'products';
 const PAGE_CART = 'cart';
@@ -14,17 +15,17 @@ function App() {
       price: "20/-",
       image: "https://www.coop.ch/img/produkte/1200_630/RGB/4094888_001.jpg?_=1539125524913"
     },
-    
-   {  
-     name: "Lays",
-     price: "20/-",
-     image: "https://images-na.ssl-images-amazon.com/images/I/71uQ3b9609L._SL1500_.jpg"
-    }, 
-    
+
+    {
+      name: "Lays",
+      price: "20/-",
+      image: "https://images-na.ssl-images-amazon.com/images/I/71uQ3b9609L._SL1500_.jpg"
+    },
+
     {
       name: "Pepsi",
       price: "50/-",
-      image: "https://images-na.ssl-images-amazon.com/images/I/515Lwr5CyxL.jpg" 
+      image: "https://images-na.ssl-images-amazon.com/images/I/515Lwr5CyxL.jpg"
     },
 
     {
@@ -35,11 +36,11 @@ function App() {
 
   ]);
 
-  const [cart,setCart] = useState([]);
-  const [page,setPage] = useState('products');
+  const [cart, setCart] = useState([]);
+  const [page, setPage] = useState('products');
 
   const addToCart = (product) => {
-    setCart([...cart, {...product}]);  
+    setCart([...cart, { ...product }]);
   };
 
   const navigateTo = (nextPage) => {
@@ -52,29 +53,29 @@ function App() {
 
   const renderProducts = () => (
     <>
-    <h1>Products</h1>
-    <div className="products">
-      {products.map((product,index) => (
-        <div className="product" key={index}>
-          <img src={product.image} alt={product.name} />
-          <h3>{product.name}</h3>
-          <h4>{product.price}</h4>
-          <button className="button" onClick={() => addToCart(product)}>Add To Cart</button>
-        </div>
-      ))}
-    </div>
-  </>
+      <h1 style={{ fontFamily: "Sansita Swashed" }} >Products</h1>
+      <div className="products">
+        {products.map((product, index) => (
+          <div className="product" key={index}>
+            <img src={product.image} alt={product.name} />
+            <h3 style={{ fontFamily: "Overlock" }}>{product.name}</h3>
+            <h4 style={{ fontFamily: "Overlock" }}>{product.price}</h4>
+            <button className="button" onClick={() => addToCart(product)}>Add To Cart</button>
+          </div>
+        ))}
+      </div>
+    </>
   );
 
   const renderCart = () => (
     <>
-      <h1>Cart</h1>
+      <h1 style={{ fontFamily: "Sansita Swashed" }} >Cart</h1>
       <div className="products">
-        {cart.map((product,index) => (
+        {cart.map((product, index) => (
           <div className="product" key={index}>
             <img src={product.image} alt={product.name} />
-            <h3>{product.name}</h3>
-            <h4>{product.price}</h4>
+            <h3 style={{ fontFamily: "Overlock" }}>{product.name}</h3>
+            <h4 style={{ fontFamily: "Overlock" }}>{product.price}</h4>
             <button className="button" onClick={() => removeFromCart(product)}>Remove</button>
           </div>
         ))}
@@ -84,20 +85,25 @@ function App() {
 
   const renderFinalPage = () => (
     <div>
-      <h1>Thankyou for shopping with us!</h1>
+      <h1 style={{ fontFamily: "Sansita Swashed" }}>Thankyou for shopping with us!</h1>
     </div>
   );
 
   return (
     <>
+      <div style={{ marginLeft: "5%", marginTop: "3%" }}>
+        <FaShoppingBag color="lightsalmon" size="5rem" />
+        <br />
+        <h3 style={{ fontFamily: "Dancing Script", fontSize: "30px" }}>Shop to your heart's content!</h3>
+      </div>
       <div className="App">
         <div>
           <header>
             <br />
-            <Parallax speed={ -10 }>
-              <button style={{marginLeft: "1090px"}} className="button" onClick={() => navigateTo(PAGE_CART)}>Go To Cart ({cart.length})</button>
-              <button style={{marginLeft: "20px"}} className="button" onClick={() => navigateTo(PAGE_PRODUCTS)}>Go To products</button>
-              <button style={{marginLeft: "20px"}} className="button" onClick={() => navigateTo(PAGE_LAST)}> Order Now </button>
+            <Parallax speed={-7}>
+              <button style={{ marginLeft: "1090px" }} className="button" onClick={() => navigateTo(PAGE_CART)}>Go To Cart ({cart.length})</button>
+              <button style={{ marginLeft: "20px" }} className="button" onClick={() => navigateTo(PAGE_PRODUCTS)}>Go To products</button>
+              <button style={{ marginLeft: "20px" }} className="button" onClick={() => navigateTo(PAGE_LAST)}> Order Now </button>
             </ Parallax>
           </header>
         </div>
