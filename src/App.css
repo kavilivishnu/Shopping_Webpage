@@ -2,6 +2,19 @@
   text-align: center;
 }
 
+.heading {
+  font-family: "Sansita Swashed"
+}
+
+.heading1 {
+  font-family: "Sansita Swashed"
+}
+
+.heading2 {
+  font-family: "Dancing Script";
+  font-size: 30px;
+}
+
 .products {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -28,4 +41,93 @@
   background-color: rgb(226, 116, 13);
   transition: .3s;
   cursor: pointer;
+}
+
+.button1{
+  padding: 10px;
+  background-color: #fff;
+  font-size: medium;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 1090px;
+}
+
+.button1:hover {
+  background-color: rgb(226, 116, 13);
+  transition: .3s;
+  cursor: pointer;
+}
+
+.button2{
+  padding: 10px;
+  background-color: #fff;
+  font-size: medium;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+.button2:hover {
+  background-color: rgb(226, 116, 13);
+  transition: .3s;
+  cursor: pointer;
+}
+
+.button3{
+  padding: 10px;
+  background-color: #fff;
+  font-size: medium;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+.button3:hover {
+  background-color: rgb(226, 116, 13);
+  transition: .3s;
+  cursor: pointer;
+}
+
+@media all and (max-width : 768px) {
+
+  .product {
+    width: 29rem;
+    height: 26rem;
+    padding: 120px 35px;
+    margin-left: 1cm;
+  }
+
+  .button1 {
+    margin-left: 20cm;
+    margin-top: -2rem;
+    margin-bottom: -10rem;
+    margin-right: 10cm;
+    padding: 1px 30px;
+  }
+
+  .button3 {
+    margin-left: 25cm;
+    margin-bottom: -10rem;
+  }
+
+  .heading {
+    margin-left: 11.5cm;
+  }
+
+  .heading1 {
+    margin-top: 5cm;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-right: -16.5cm;
+  }
+
+  .heading2 {
+    font-family: "Dancing Script";
+    font-weight: bolder;
+    font-size: 33px;
+  }
+
 }

@@ -53,7 +53,7 @@ function App() {
 
   const renderProducts = () => (
     <>
-      <h1 style={{ fontFamily: "Sansita Swashed" }} >Products</h1>
+      <h1 className="heading">Products</h1>
       <div className="products">
         {products.map((product, index) => (
           <div className="product" key={index}>
@@ -69,7 +69,7 @@ function App() {
 
   const renderCart = () => (
     <>
-      <h1 style={{ fontFamily: "Sansita Swashed" }} >Cart</h1>
+      <h1 className="heading" >Cart</h1>
       <div className="products">
         {cart.map((product, index) => (
           <div className="product" key={index}>
@@ -85,7 +85,7 @@ function App() {
 
   const renderFinalPage = () => (
     <div>
-      <h1 style={{ fontFamily: "Sansita Swashed" }}>Thankyou for shopping with us!</h1>
+      <h1 className="heading1" >Thankyou for shopping with us!</h1>
     </div>
   );
 
@@ -94,16 +94,16 @@ function App() {
       <div style={{ marginLeft: "5%", marginTop: "3%" }}>
         <FaShoppingBag color="lightsalmon" size="5rem" />
         <br />
-        <h3 style={{ fontFamily: "Dancing Script", fontSize: "30px" }}>Shop to your heart's content!</h3>
+        <h3 className="heading2" >Shop to your heart's content!</h3>
       </div>
       <div className="App">
         <div>
           <header>
             <br />
             <Parallax speed={-7}>
-              <button style={{ marginLeft: "1090px" }} className="button" onClick={() => navigateTo(PAGE_CART)}>Go To Cart ({cart.length})</button>
-              <button style={{ marginLeft: "20px" }} className="button" onClick={() => navigateTo(PAGE_PRODUCTS)}>Go To products</button>
-              <button style={{ marginLeft: "20px" }} className="button" onClick={() => navigateTo(PAGE_LAST)}> Order Now </button>
+              <button className="button1" onClick={() => navigateTo(PAGE_CART)}>Cart ({cart.length})</button>
+              <button className="button2" onClick={() => navigateTo(PAGE_PRODUCTS)}>Products</button>
+              <button className="button3" onClick={() => navigateTo(PAGE_LAST)}>Order Now</button>
             </ Parallax>
           </header>
         </div>
