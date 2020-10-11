@@ -92,7 +92,9 @@ function App() {
   return (
     <>
       <div style={{ marginLeft: "5%", marginTop: "3%" }}>
-        <FaShoppingBag color="lightsalmon" size="5rem" />
+        <a href="PAGE_PRODUCTS">
+          <FaShoppingBag color="lightsalmon" size="5rem" />
+        </a>
         <br />
         <h3 className="heading2" >Shop to your heart's content!</h3>
       </div>
