@@ -1,3 +1,7 @@
+Fully Responsive on all devices.
+
+Image editing and uploading App. Link for the App - https://shopbizz.netlify.app
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
